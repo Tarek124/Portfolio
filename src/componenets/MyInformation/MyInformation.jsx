@@ -10,32 +10,6 @@ import { MdFileDownload } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const MyInformation = () => {
-  const handleDownload = () => {
-    // Replace 'path_to_your_resume.pdf' with the actual path to your resume file
-    const resumeUrl = "./resume2.pdf";
-
-    fetch(resumeUrl)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.blob();
-      })
-      .then((blob) => {
-        const url = window.URL.createObjectURL(new Blob([blob]));
-        const link = document.createElement("a");
-        link.href = url;
-        link.setAttribute("download", "your_resume.pdf"); // Set the default download file name here
-        document.body.appendChild(link);
-        link.click();
-        link.parentNode.removeChild(link);
-      })
-      .catch((error) => {
-        console.error("Error downloading resume:", error);
-        // Handle error, e.g., show a message to the user
-      });
-  };
-
   return (
     <div className="w-80 flex flex-col items-center p-4 bg-white rounded">
       <div className="p-4">
@@ -122,12 +96,12 @@ const MyInformation = () => {
           </div>
         </div>
       </div>
-      <button
-        onClick={handleDownload}
+      <Link
+        to="https://drive.google.com/file/d/13ilowOS3WEJ0ypaca73GZaTgiikWbyBK/view?usp=drive_link"
         className="inline-flex  h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
       >
         <MdFileDownload /> Resume
-      </button>
+      </Link>
     </div>
   );
 };

@@ -5,3 +5,19 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.title {
+  font-family: "Lobster", sans-serif;
+}
+.myText {
+  -webkit-text-stroke: white 1px;
+  color: transparent; /* Text color */
+}
+.myText3 {
+  -webkit-text-stroke: rgb(15, 79, 244) 1px;
+  color: transparent; /* Text color */
+}
+.myText2 {
+  -webkit-text-stroke: #4ade80 2px;
+  color: transparent; /* Text color */
+}
