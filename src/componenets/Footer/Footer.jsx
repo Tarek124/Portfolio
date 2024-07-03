@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
           <div className="max-[991px]:flex-none">
             <p className="text-[#bcb9b9] max-[479px]:text-sm">
-              © Copyright 2021. All rights reserved.
+              © Copyright 2024. All rights reserved.
             </p>
           </div>
         </div>
