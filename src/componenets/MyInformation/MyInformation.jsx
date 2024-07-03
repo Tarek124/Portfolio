@@ -44,6 +44,11 @@ const MyInformation = () => {
           <img className="w-8" src={linkedin} alt="linkedin" />
         </Link>
       </div>
+      <div className="p-4 rounded shadow-inner">
+        <div>
+          <div></div>
+        </div>
+      </div>
     </div>
   );
 };
