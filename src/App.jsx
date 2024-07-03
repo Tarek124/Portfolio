@@ -41,7 +41,7 @@ const App = () => {
   }, []);
   return (
     <div className="relative" ref={comp}>
-      {/* <div
+      <div
         id="intro-slider"
         className="h-screen overflow-hidden p-4 sm:p-10 bg-gradient-to-r from-[#020617] to-[#b314db]  text-white absolute top-0 left-0 z-40 w-full flex flex-col"
       >
@@ -69,10 +69,9 @@ const App = () => {
         >
           Abdullah Al Tarek
         </h1>
-      </div> */}
+      </div>
       <div>
-        {/* <div id="welcome"> */}
-        <div>
+        <div id="welcome">
           <div className="h-screen w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
             <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
             <div className="max-w-[1500px] flex items-start gap-4">

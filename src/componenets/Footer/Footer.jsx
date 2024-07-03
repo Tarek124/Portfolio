@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="w-full max-w-[560px] max-[991px]:mr-4 max-[991px]:flex-initial max-[767px]:mr-0">
             <h2 className="text-xl font-semibold md:text-3xl">
               <span className="text-[#1353fe]">Building Lightning Fast</span>{" "}
-              Webflow Dev MERN Stack Applications with Precision
+              MERN Stack Applications with Me
             </h2>
           </div>
           <div className="max-[991px]:ml-4 max-[991px]:flex-none max-[767px]:ml-0 max-[767px]:mt-8">

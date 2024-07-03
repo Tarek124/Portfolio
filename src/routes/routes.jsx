@@ -4,6 +4,7 @@ import AboutMe from "../componenets/AboutMe/AboutMe";
 import Educarion from "../componenets/Education/Educarion";
 import Skills from "../componenets/Skills/Skills";
 import Projects from "../componenets/Projects/Projects";
+import Contact from "../componenets/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
       { path: "/education", element: <Educarion /> },
       { path: "/skills", element: <Skills /> },
       { path: "/project", element: <Projects /> },
+      { path: "/contact", element: <Contact /> },
     ],
   },
 ]);
