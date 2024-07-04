@@ -83,12 +83,13 @@ const Skills = () => {
               {skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="sm:w-44 w-40 p-6 flex flex-col justify-center items-center shadow hover:shadow-lg transition-all rounded "
+                  className="sm:w-44 w-32 p-4 sm:p-6 flex flex-col justify-center items-center shadow hover:shadow-lg transition-all rounded "
                 >
-                  <h1 className="mb-4 text-xl text-center font-semibold text-gray-700">
+                  <h1 className="mb-4 text-lg
+                   sm:text-xl text-center font-semibold text-gray-700">
                     {skill.name.toUpperCase()}
                   </h1>
-                  <img src={skill.image} className=" w-20" alt={skill.name} />
+                  <img src={skill.image} className="w-16 sm:w-20" alt={skill.name} />
                 </div>
               ))}
             </div>
