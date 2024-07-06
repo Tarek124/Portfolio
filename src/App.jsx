@@ -8,37 +8,37 @@ import gsap from "gsap";
 const App = () => {
   const comp = useRef(null);
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      const t1 = gsap.timeline();
-      t1.from("#intro-slider", {
-        xPercent: "-100",
-        duration: 1.3,
-        delay: 0.3,
-      })
-        .from(["#title-1", "#title-2", "#title-3", "#title-4"], {
-          opacity: 0,
-          y: "+=30",
-          stagger: 0.5,
-        })
-        .to(["#title-1", "#title-2", "#title-3", "#title-4"], {
-          opacity: 0,
-          y: "-=30",
-          delay: 0.3,
-          stagger: 0.5,
-        })
-        .to("#intro-slider", {
-          xPercent: "-100",
-          duration: 1.3,
-        })
-        .from("#welcome", {
-          opacity: 0,
-          duration: 0.5,
-        });
-    }, comp);
+  // useLayoutEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     const t1 = gsap.timeline();
+  //     t1.from("#intro-slider", {
+  //       xPercent: "-100",
+  //       duration: 1.3,
+  //       delay: 0.3,
+  //     })
+  //       .from(["#title-1", "#title-2", "#title-3", "#title-4"], {
+  //         opacity: 0,
+  //         y: "+=30",
+  //         stagger: 0.5,
+  //       })
+  //       .to(["#title-1", "#title-2", "#title-3", "#title-4"], {
+  //         opacity: 0,
+  //         y: "-=30",
+  //         delay: 0.3,
+  //         stagger: 0.5,
+  //       })
+  //       .to("#intro-slider", {
+  //         xPercent: "-100",
+  //         duration: 1.3,
+  //       })
+  //       .from("#welcome", {
+  //         opacity: 0,
+  //         duration: 0.5,
+  //       });
+  //   }, comp);
 
-    return () => ctx.revert();
-  }, []);
+  //   return () => ctx.revert();
+  // }, []);
   return (
     <div className="relative" ref={comp}>
       <div
@@ -74,16 +74,16 @@ const App = () => {
         <div id="welcome">
           <div className="h-screen w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
             <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-            <div className="max-w-[1500px] flex items-start gap-4">
-              <div className="z-40 mt-10 lg:flex hidden">
+            <div className="max-w-[1500px]  flex items-start gap-4">
+              <div className="z-40 lg:flex hidden h-[95vh] overflow-y-auto mt-4">
                 <MyInformation />
               </div>
 
               <div className="flex max-w-5xl mx-auto flex-row-reverse">
-                <div className="z-40 mt-10 lg:flex hidden items-start">
+                <div className="z-40 mt-4 lg:flex hidden items-start">
                   <Navbar />
                 </div>
-                <div className="z-40 lg:pt-10 overflow-y-auto h-screen">
+                <div className="z-40 lg:pt-4 overflow-y-auto h-screen">
                   <div className="z-40 fixed inset-x-0 flex lg:hidden  justify-center items-center">
                     <Navbar />
                   </div>

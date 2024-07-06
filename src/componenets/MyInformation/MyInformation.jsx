@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import github from "./icons/github.png";
 import facebook from "./icons/facebook.png";
 import instagram from "./icons/instagram.png";
@@ -11,7 +12,9 @@ import { Link } from "react-router-dom";
 
 const MyInformation = () => {
   return (
-    <div className="w-80 flex flex-col items-center p-4 bg-white rounded">
+    <div
+      className={`w-80 flex flex-col items-center p-4 bg-white rounded`}
+    >
       <div className="p-4">
         <img
           src="https://i.ibb.co/xYht33r/IMG-4387.jpg"
