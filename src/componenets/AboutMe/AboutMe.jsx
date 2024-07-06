@@ -45,7 +45,7 @@ const AboutMe = () => {
       <div className="lg:hidden border rounded shadow-md flex justify-center">
         <MyInformation />
       </div>
-      <div className="sm:mx-4 my-4">
+      <div className="sm:mx-4 my-4 animate__fadeIn animate__animated">
         <div>
           <h1 className="sm:pt-0 pt-4 text-3xl sm:text-5xl font-semibold text-gray-600">
             About Me

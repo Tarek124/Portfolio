@@ -10,7 +10,7 @@ function Projects() {
         {dummyContent.map((item, index) => (
           <div
             key={index}
-            className="my-10 lg:border rounded lg:shadow-md lg:p-10"
+            className="my-10 lg:border rounded lg:shadow-md lg:p-10 animate__fadeInRight animate__animated"
           >
             <p className="text-2xl font-semibold text-gray-700 mb-4">
               {item.title}

@@ -36,7 +36,7 @@ const Skills = () => {
         {skills.map((skill) => (
           <div
             key={skill.name}
-            className="sm:w-44 w-32 p-4 sm:p-6 flex flex-col justify-center items-center shadow-md rounded "
+            className="animate__fadeIn animate__animated sm:w-44 w-32 p-4 sm:p-6 flex flex-col justify-center items-center shadow-md rounded "
           >
             <h1
               className="mb-4 text-lg

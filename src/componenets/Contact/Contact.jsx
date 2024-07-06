@@ -36,7 +36,7 @@ const Contact = () => {
       </h1>
       <form
         onSubmit={onSubmit}
-        className="border my-8 p-4 sm:p-8 rounded-lg w-full shadow-lg"
+        className="border my-8 p-4 sm:p-8 rounded-lg w-full shadow-lg animate__fadeIn animate__animated"
       >
         <div className="gap-5 w-full flex-col">
           <div className="flex flex-col mb-4  w-full">

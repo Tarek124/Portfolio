@@ -6,7 +6,7 @@ const Educarion = () => {
 
         <a
           href="#"
-          className="flex flex-col  border border-gray-200 rounded-lg shadow md:flex-row "
+          className="animate__animated animate__fadeInLeft flex flex-col border border-gray-200 rounded-lg shadow md:flex-row "
         >
           <img
             className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-s-lg"
@@ -26,7 +26,7 @@ const Educarion = () => {
         </a>
         <a
           href="#"
-          className="flex flex-col my-4 border border-gray-200 rounded-lg shadow md:flex-row "
+          className="animate__animated animate__fadeInLeft flex flex-col my-4 border border-gray-200 rounded-lg shadow md:flex-row "
         >
           <img
             className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-s-lg"
