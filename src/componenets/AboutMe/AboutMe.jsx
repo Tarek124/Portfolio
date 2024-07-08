@@ -42,7 +42,7 @@ const AboutMe = () => {
 
   return (
     <div className="bg-white p-4 sm:flex items-start pt-24 lg:pt-8 gap-4">
-      <div className="lg:hidden border rounded shadow-md flex justify-center">
+      <div className="xl:hidden border rounded shadow-md flex justify-center">
         <MyInformation />
       </div>
       <div className="sm:mx-4 my-4 animate__fadeIn animate__animated">
