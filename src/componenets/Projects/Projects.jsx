@@ -1,19 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
-import { IoAdd } from "react-icons/io5";
 import toast, { Toaster } from "react-hot-toast";
-import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { HiOutlineDotsVertical } from "react-icons/hi";
 
 function Projects() {
   const navigate = useNavigate();
-  function handleAddProject(e) {
+
+  function handleManageProject(e) {
     e.preventDefault();
-
     const password = e.target.password.value;
-
+    console.log(password);
     if (password === "3825739") {
-      navigate("/ae893f@d31k49dk");
+      navigate("/managemykdkldsfai3e9939023kldjf39jkjdf90834eurkldf90ejdfkjfi");
     } else if (password === "") {
       toast.error("Please enter password");
     } else {
@@ -28,30 +27,29 @@ function Projects() {
       return req.data;
     },
   });
-  console.log(projects);
   return isLoading ? (
-    ""
+    <div className="flex h-screen justify-center items-center">
+      <span className="loading loading-spinner loading-lg"></span>
+    </div>
   ) : (
     <div className="bg-white p-4 pt-24 lg:pt-8">
       <h1 className="sm:pt-0 pt-4 text-center text-3xl sm:text-5xl font-semibold text-gray-600">
         Project
       </h1>
-
       <div className="lg:p-10">
-        <button
-          onClick={() => document.getElementById("my_modal_2").showModal()}
-          className="bg-gray-100 p-4 rounded-full shadow-md tooltip"
-          data-tip="Add new Project"
-        >
-          <IoAdd className="text-lg text-blue-500" />
-        </button>
         {projects.map((item, index) => (
           <div
             key={index}
             className="my-10 lg:border rounded lg:shadow-md lg:p-10 animate__fadeInRight animate__animated"
           >
-            <p className="text-2xl font-semibold text-gray-700 mb-4">
+            <p className="text-2xl flex items-center font-semibold text-gray-700 mb-4">
               {item.name}
+              <HiOutlineDotsVertical
+                onClick={() =>
+                  document.getElementById("my_modal_2").showModal()
+                }
+                className="text-sm cursor-pointer ml-1"
+              />
             </p>
             <img className="shadow-md rounded" src={item.imageUrl} alt="" />
             <div className="text-sm flex flex-col gap-2 mt-6 prose prose-sm dark:prose-invert">
@@ -59,7 +57,6 @@ function Projects() {
                 Description
               </h1>
               <div>
-                {" "}
                 {item?.description?.map((x) => (
                   <p key={index}>
                     <span className="font-semibold">{x.title}:</span>
@@ -99,11 +96,10 @@ function Projects() {
           </div>
         ))}
       </div>
-
       <dialog id="my_modal_2" className="modal">
         <Toaster />
         <div className="modal-box">
-          <form onSubmit={handleAddProject}>
+          <form onSubmit={handleManageProject}>
             <div>
               <label htmlFor="hs-trailing-button-add-on" className="sr-only">
                 Label

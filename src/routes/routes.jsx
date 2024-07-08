@@ -6,6 +6,7 @@ import Skills from "../componenets/Skills/Skills";
 import Projects from "../componenets/Projects/Projects";
 import Contact from "../componenets/Contact/Contact";
 import AddNewProject from "../componenets/AddNewProject/AddNewProject";
+import ManageProject from "../componenets/ManageProject/ManageProject";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         element: <Projects />,
       },
       { path: "/contact", element: <Contact /> },
+      {
+        path: "/managemykdkldsfai3e9939023kldjf39jkjdf90834eurkldf90ejdfkjfi",
+        element: <ManageProject />,
+      },
       { path: "/ae893f@d31k49dk", element: <AddNewProject /> },
     ],
   },
