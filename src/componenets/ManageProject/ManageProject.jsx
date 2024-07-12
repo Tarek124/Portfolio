@@ -9,7 +9,9 @@ const ManageProject = () => {
   const { data: projects = [], refetch } = useQuery({
     queryKey: ["project"],
     queryFn: async () => {
-      const req = await axios.get("http://localhost:3000/project");
+      const req = await axios.get(
+        "https://back-end-beryl-nu.vercel.app/project"
+      );
       return req.data;
     },
   });
@@ -26,10 +28,12 @@ const ManageProject = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         toast.promise(
-          axios.delete(`http://localhost:3000/project?id=${id}`).then((res) => {
-            console.log(res.data);
-            refetch();
-          }),
+          axios
+            .delete(`https://back-end-beryl-nu.vercel.app/project?id=${id}`)
+            .then((res) => {
+              console.log(res.data);
+              refetch();
+            }),
           {
             loading: "deleting...",
             success: <b>Deleted!</b>,

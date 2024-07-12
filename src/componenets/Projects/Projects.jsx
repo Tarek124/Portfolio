@@ -23,7 +23,7 @@ function Projects() {
   const { data: projects = [], isLoading } = useQuery({
     queryKey: ["project"],
     queryFn: async () => {
-      const req = await axios.get("http://localhost:3000/project");
+      const req = await axios.get("https://back-end-beryl-nu.vercel.app/project");
       return req.data;
     },
   });

@@ -46,7 +46,7 @@ const AddNewProject = () => {
           };
           toast.promise(
             axios
-              .post("http://localhost:3000/project", projectData)
+              .post("https://back-end-beryl-nu.vercel.app/project", projectData)
               .then((res) => {
                 console.log(res.data);
                 form.reset();
